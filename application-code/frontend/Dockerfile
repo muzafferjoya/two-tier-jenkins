@@ -9,7 +9,8 @@ COPY package*.json ./
 
 RUN npm install --ignore-scripts
 
-COPY . .
+COPY public ./public
+COPY src ./src
 
 # Change ownership of the application directory to the non-root user
 RUN chown -R appuser:appgroup /usr/src/app
